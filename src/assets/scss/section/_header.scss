@@ -39,15 +39,22 @@
                         a{
                             display: inline-block;
                             padding: 10px 20px;
+                            position: relative;
+
+                            &::before{
+                                background-color: var(--white);
+                            }
+  
+                           
                         }
                     }
                 }
             }
 
-            &.show + .header_nav_mobile::before{
+            &.show + .header_nav_mobile span::before{
                 width: 20px;
             }
-            &.show + .header_nav_mobile::after{
+            &.show + .header_nav_mobile span::after{
                 width: 20px;
             }
 
@@ -59,6 +66,22 @@
                 a{
                     display: inline-block;
                     padding: 14px;
+                    position: relative;
+
+                     &::before{              
+                        height: 2px;
+                        content: "";
+                        width: 100%;
+                        background-color: var(--black);
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        transform: scaleX(0);
+                        transition: all 0.3s;
+                    }
+                    &:hover::before{
+                        transform: scaleX(1);
+                    }
                 }
             }
         }
