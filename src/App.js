@@ -5,7 +5,6 @@ import Sub1 from './views/Sub1';
 import Sub2 from './views/Sub2';
 import Link from './views/Link';
 
-
 const App = () => {
 
   useEffect(()=>{
@@ -16,7 +15,7 @@ const App = () => {
         <Routes>
             <Route path='/' element={<Homeview />} />
             <Route path='/sub1' element={<Sub1 />} />
-            <Route path='/sub2' element={<Sub2 />} />
+            <Route path='/sub2' element={<Sub2 />} />           
         </Routes>
     </BrowserRouter>
   )

@@ -5,8 +5,8 @@ import Skill from '../components/Skill'
 const Sub2 = () => {
   return (
     <>
-      <Header />
-      <Skill />
+        <Header />
+        <Skill />
     </>
   )
 }
